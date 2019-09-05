@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+     <!--o async deixa o carregamento do código assincrono = Espera um código carregar um por fez
+       usando o asyn ele não depende um do outro -->
+     <!-- Os arquivos carregam juntos por exemplo HTML e JS -->
+
+     <!-- Estrutura de controller sequencial -->
+    <script type="text/javascript" async="async">
+    // boxes - prompt - alert - confirm
+    function informacao(){
+     var nome = window.prompt("Digite seu nome");
+     window.alert(nome);
+    }
+    </script>
+
+    <script type="text/javascript" async="async">
+
+    informacao();
+    
+    </script>
+
+    <script type="text/javascript" async="async">
+    informacao();
+    </script>
+
+    <script type="text/javascript" async="async">
+    informacao();
+    </script>
+
+
+
+
+</body>
+
+</html>
