@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script type="text/javascript" async="async">
+        //função anonima, significa que está atrelada a um evento.
+        window.onload = function () {
+            carrega_nome();
+            //está associada ao evento onload.
+            window.document.getElementById('um').onclick = function () {
+                informacao();
+            }
+            //está associada ao evento onload.
+            window.document.getElementById('dois').ondblclick = function () {
+                informacao();
+            }
+
+        }
+
+        function informacao() {
+            var nome = window.prompt("Digite seu nome");
+            var idade = window.prompt("Digite sua idade");
+            window.alert(nome + idade);
+        }
+
+        function carrega_nome() {
+            //Altera o valor do input nome.
+            window.document.getElementById('nome').value = "Rosa";
+        }
+    </script>
+</head>
+
+
+<body>
+  
+    <input type="button" id="um" value="um">
+    <br>
+    <input type="button" id="dois" value="dois">
+    <hr>
+    <input type="txt" id="nome" value="Impacta">
+</body>
+
+</html>
