@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        //palavra reservada VAR é opcional e definará o escopo da variavel se 
+        //utilizada dentro de uma função.
+
+        var a = 9;
+        console.log(a);
+
+        b = 7;
+        function escopo() {
+            a = 18;
+            b = 14;
+            alert(a+ " " + b);
+            // quando uso var ele permanece o valor 
+            // dentro da função e o valor fora da função.
+            // quando declaramos sem o var, a variavel
+            // muda de valor, passando ser o último valor
+            // atribuido.
+        }
+        escopo(); 
+        //sempre temos que chamar uma função, para que 
+        //a mesma excecute.
+        console.log(b);
+
+    </script>
+</head>
+
+
+<body>
+    <p>Constantes</p>
+
+
+</body>
+
+</html>

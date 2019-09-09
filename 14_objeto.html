@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+    
+        function aluno(nome,idade,curso){
+            this.nome = nome; 
+            this.idade = idade;
+            this.curso = curso;
+        }
+        // Em JS não se usa class - Usa-se function
+        // Ele percebe que é uma classe por causa do 
+        // uso do this.
+
+        //pode substituir o this pelo nome da variavel
+        // exemplo: aluno.nome = nome;
+
+        var aluno = new aluno ("Duda", 20, "Js");
+  
+        //Alterar o valor da propriedade nome do objeto aluno.
+        aluno.nome = "Maria";
+        console.log(aluno.nome);
+        
+
+    </script>
+</head>
+
+
+<body>
+    <p>Objeto</p>
+    <!-- Js é totalmente orientada a objetos -->
+    <!-- Objetos nativos da linguagem - Array, regexp, number,
+        String, objeto generico - Object.
+        Objetos criados pelo browser, Objetos criados pelo 
+        desenvolvedor.
+    -->
+    
+
+
+</body>
+
+</html>
