@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        window.onload = function(){
+            document.getElementById("um").href="javascript:void(0)";
+            document.getElementById("dois").href="javascript:void(document.body.style.backgroundColor='#00ffff')";
+            document.getElementById("tres").href="javascript:void(document.body.style.backgroundColor='#336699')";
+        }
+      
+
+    </script>
+</head>
+
+
+<body>
+    <p>Operadores especiais - Void</p>
+
+    <!-- javascript:void(0) - retorna vazio -->
+    <p><a id="um">Não faz nada</a></p>
+    <!-- Deixa de ser um link, assim a página não carrega. -->
+    <p><a id="dois">Muda cor de fundo para azul</a></p>
+    <p><a id="tres">Muda cor de fundo para FACEBOOK</a></p>
+</body>
+
+</html>
