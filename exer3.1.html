@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>JS</title>
+        <script type="text/javascript">
+
+            function calcula(objeto){
+
+               var resultado =  parseInt(document.getElementById('resultado').value);
+
+               if(objeto = 'incrementa'){
+
+                resultado++;
+
+               }else{
+                resultado--;
+               }
+
+               document.getElementById('resultado').value = resultado;
+
+
+            }
+
+          
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" name="decrementa" id="decrementa" value=" - " onclick="calcula(this.id);">
+            <input type="text" name="resultado" id="resultado" value="0" size="2">
+            <input type="button" name="incrementa" id="incrementa" value=" + " onclick="calcula(this.id);">
+
+        </form>
+    </body>
+</html>

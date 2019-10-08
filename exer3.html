@@ -1,33 +1,46 @@
 <html>
-    <head>
-        <title>JS</title>
-        <script type="text/javascript">
 
-            function mais(){
+<head>
+    <title>JS</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("incrementa").onclick = function () {
 
-               var resultado =  parseInt(document.getElementById('resultado').value);
+                calcula(this.id);
 
-               resultado++; //resultado = resultado +1;
 
-               document.getElementById('resultado').value = resultado;
+            }
+            document.getElementById("decrementa").onclick = function () {
+
+                calcula(this.id);
+            }
+            function mais() {
+
+                var resultado = parseInt(document.getElementById('resultado').value);
+
+                resultado++; //resultado = resultado +1;
+
+                document.getElementById('resultado').value = resultado;
 
 
             }
 
-            function menos(){
-                
-               var resultado =  parseInt(document.getElementById('resultado').value);
+            function menos() {
+
+                var resultado = parseInt(document.getElementById('resultado').value);
                 resultado--;
                 document.getElementById('resultado').value = resultado;
             }
-        </script>
-    </head>
-    <body>
-        <form>
-            <input type="button" name="decrementa" id="decrementa" value=" - " onclick="menos();">
-            <input type="text" name="resultado" id="resultado" value="0" size="2">
-            <input type="button" name="incrementa" id="incrementa" value=" + " onclick="mais();">
+    </script>
+</head>
 
-        </form>
-    </body>
+<body>
+    <form>
+        <input type="button" name="decrementa" id="decrementa" value=" - ">
+        <input type="text" name="resultado" id="resultado" value="0" size="2">
+        <input type="button" name="incrementa" id="incrementa" value=" + ">
+
+    </form>
+</body>
+
 </html>
