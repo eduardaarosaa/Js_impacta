@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Object</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+    //objeto + primitivo => generico - O que serve para todos
+    //todos os outros objetos serão herança dele
+    // ele quem tras todas as propriedades do objeto.
+
+
+    var Airbus = new Object();
+
+    //Padrão para criação de objeto, variavel letra maiuscula.
+
+    Airbus.a380 = 'Intercontinetal';
+
+    Airbus.a320 = 'Curtas distancias';
+
+    //assosciada ao objeto airbus
+    Airbus.voar = function(){
+
+        return 'Fabricante Europeu';
+    }
+
+
+    console.log(Airbus);
+
+    console.log(Airbus['a380']); //array nominativo
+
+    console.log(Airbus.a380); // tambem tras a proprieda a380 do array.
+
+    console.log(Airbus.voar()); // para ser executada tenho que chamar o objeto Airbus
+
+    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
