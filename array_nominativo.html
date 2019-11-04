@@ -17,17 +17,17 @@
             for (i = 1; i <= pot; i++) {
                 total = total * num;
             }
-          //colecao de dados - array
-          return [total,num,pot];
+         
+          return {'calculo':total,'base':num,'expoente':pot};
         }
 
         var resultado = potencia(2,3); + potencia(3,2);
 
-        document.write(resultado[0]);
+        document.write(resultado['calculo']);
         document.write("<br>");
-        document.write(resultado[1]);
+        document.write(resultado['base']);
         document.write("<br>");
-        document.write(resultado[2]);
+        document.write(resultado['expoente']);
        
     </script>
 </head>
