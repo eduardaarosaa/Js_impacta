@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Expressões regualres </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+    
+
+        var regexp2 = /Imp/i;
+        var string2 = "O Rato roeu a roup do rei de Roma";
+        alert(string2.match(/Ro/ig));
+
+        // i - ignora caixa alta e baixa
+        // g - Mostra todas as expressoes
+
+        alert(string2.replace(/r[a-z]/g,'xy'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

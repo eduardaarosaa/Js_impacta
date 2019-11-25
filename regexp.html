@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Expressões regualres </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        // 1 maneira
+        // segundo parametro moderador, ele não levou em consideração o i minusculo
+        // ou maiusculo.
+        var regexp1 = new RegExp('Imp', "i");
+        var string1 = "Impacta";
+
+        alert(regexp1.test(string1));
+        alert(regexp1.exec(string1)); //retorna a primeira ocorrência
+
+        // 2 maneira - sintaxe literal
+
+        var regexp2 = /Imp/;
+        var string2 = "Impacta";
+        alert(regexp2.test(string2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
