@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Event</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        window.onload=function(){
+           function documento(){
+
+                alert("Documento");
+            }
+            function dive(){
+                alert("div");
+            }
+            function botao(){
+                alert("botão");
+            }
+            document.addEventListener('click',documento,false);
+            document.getElementById(botao).addEventListener('click',botao,false);
+            document.getElementById(dive).addEventListener('click',dive,false);
+
+            //crosbrowse - que funcione em todos os browse
+            //parar com a propagação
+            function evento(evt){
+                var evento = evt ? evt : window.event;
+                if(evento.stopPropagation){
+                    evento.stopPropagation();
+                }else{
+                    evento.cancelBubble  = true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="dive">
+        <p>
+            <input type="button" name="botao" id="botao" value="Propagação">
+        </p>
+        <p>
+            <input type="button" name="botao" id="botao" value="Não propagação">
+        </p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function somenteNumeros(e){
+        var tecla = (window.event)?event.KeyCode:e.which;
+        if(tecla > 47 && tecla < 58){
+            return true;
+        }else{
+            if(tecla == 8 || tecla == 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <input type="text" name="numeros" id="numeros" onkeypress="return somenteNumeros(event)">
+    
+</body>
+</html>
