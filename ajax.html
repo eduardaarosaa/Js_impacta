@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ajax</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+    //enviar dados sem recarregar a página - AJAX
+    //Ajax é um padrão 
+
+    window.onload = function(){
+        document.getElementById("lista").onclick=function(){
+            var resp = document.getElementById("resposta");
+           
+           //objeto XMLHttpRequest
+
+           var carregaLista = new XMLHttpRequest(); //requisição de dados
+           carregaLista.onreadystatechange = function(){
+
+               //é um evento e crio uma função para toda vez que o evento mudnar
+
+               if(carregaLista.readyState == 4){
+
+                   //alert("requisição chegou");
+                   // alert(carregaLista.status);
+                   //alert(carregaLista.statusText);
+                   //alert(carregaLista.responseText);
+
+                   resp.innerHTML = carregaLista.responseText;
+
+               }
+
+           }
+           carregaLista.open("POST",'frutas.html',true); //abre a conexao
+           carregaLista.send(); //envia a requisição
+           
+           //alert(carregaLista.statusText);
+        }
+        document.getElementById("combo").onclick=function(){
+            var resp = document.getElementById("resposta");
+           
+           //objeto XMLHttpRequest
+
+           var carregaCombo= new XMLHttpRequest(); //requisição de dados
+             carregaCombo.onreadystatechange = function(){
+
+               //é um evento e crio uma função para toda vez que o evento mudnar
+
+               if(carregaCombo.readyState == 4){
+
+                   //alert("requisição chegou");
+                   // alert(carregaLista.status);
+                   //alert(carregaLista.statusText);
+                   //alert(carregaLista.responseText);
+
+                   resp.innerHTML = carregaCombo.responseText;
+
+               }
+
+           }
+           carregaCombo.open("POST",'select.html',true); //abre a conexao
+           carregaCombo.send(); //envia a requisição
+           
+           //alert(carregaLista.statusText);
+        }
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <input type='button' name="botao" id="lista" value="Carregar Lista">
+        <input type="button" name="botao" id="combo" value="Carregar Select">
+    </div>
+    <hr>
+    <div id="resposta">Conteudo que será trocado!!!</div>
+    
+</body>
+</html>
