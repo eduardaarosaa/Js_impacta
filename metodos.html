@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Metodos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        window.onload = function(){
+       // var sexo = document.getElementById("radio");
+        //alert(sexo.type);
+
+        var sexo = document.getElementsByName('sexo');
+        alert(sexo[0]); // mostra o indice 0 
+        alert(sexo[0].value); // mostra o valor desse indice 
+
+        var classe = document.getElementsByClassName('teste');
+        alert(classe[2].name);
+        alert(classe[1].href);
+        alert(classe[0].innerHTML); //Ver o conteudo de um paragrafo
+
+        var paragrafo = document.getElementsByTagName('p');
+        alert(paragrafo[1].innerHTML);
+
+        var genero = document.querySelector('#radio');
+        alert(sexo.value);
+        
+
+        
+        }
+    </script>
+</head>
+<body>
+    <div id="paragrafos">
+        <p class="teste" value="p1">Primeiro Parágrafo</p>
+        <p>Segundo paragrafo</p>
+        <p>Terceiro paragrafo</p>
+    </div>
+    <div id="links">
+        <p><a class="teste" href="www.impacta.com.br">Impacta</a></p>
+        <p><a href="www.impacta.edu.br">FIT</a></p>
+        <p><a href="aluno.impactaonline.com.br">Impacta online</a></p>
+    </div>
+
+    <div id="inputs">Content for id "inputs" Goes Here
+        <form id="form1" name="form1" method="POST">
+            <p>
+                <label for="nome">Nome</label>
+                <input class="teste" type="text" name="nome" id="nome">
+                <br>
+                <label for="idade">Idade</label>
+                <input type="text" name="idade" id="idade">
+            </p>
+            <p>Sexo:
+            <input type="radio" name="sexo" id="radio" value="M">
+            <label for="masc">Masculino</label>
+            <input type="radio" name="sexo" id="radio2" value="F">
+            <label for="fem">Feminino</label>
+
+        </p>
+            </form>
+    </div>
+    
+</body>
+</html>
