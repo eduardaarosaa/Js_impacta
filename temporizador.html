@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Temporizador</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+    window.onload = function(){
+        //executa a função cor 
+        setTimeout(cor,3000);
+
+        horas(); //executa a função horas
+        setInterval(horas,1000); // Intervalo de tempo para a função horas ser executada
+
+    }
+
+    function cor(){
+        document.getElementById('texto').style.backgroundColor="#ff0000";
+    }
+
+    function horas(){
+        var agora = new Date;
+        var relogio =agora.getHours()+ ":" + agora.getMinutes()+ ":"+ agora.getSeconds();
+        document.getElementById("horas").innerHTML = relogio;
+    }
+    </script>
+</head>
+<body>
+    <p id="texto">Texto para teste de background</p>
+<hr>
+<div id="horas">00:00:00</div>
+</body>
+</html>
